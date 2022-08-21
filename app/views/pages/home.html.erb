@@ -1,2 +1,8 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container mt-5">
+  <h1>Le Wagon Chat</h1>
+  <ul>
+    <% @chatrooms.each do |chatroom| %>
+      <li><%= link_to chatroom.name, chatroom_path(chatroom) %></li>
+    <% end %>
+  </ul>
+</div>
